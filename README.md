@@ -4,6 +4,10 @@
 
 wiremock
 
+### node
+### express
+c
+
 # Architecture schema
 
 
@@ -37,3 +41,16 @@ java -jar /path/to/wiremock-standalone-2.18.0.jar --port c
 ```
 curl -X POST --data '{}' http://localhost:9001/payment/api/process
 ```
+
+
+## Backend
+
+### Run
+
+### Test
+
+```
+curl  http://localhost:3000
+curl  http://localhost:3000/payment
+```
+
