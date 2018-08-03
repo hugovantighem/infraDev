@@ -33,7 +33,7 @@ curl -X POST --data '{}' http://localhost:9080/api/item
 
 ```
 cd mockService
-java -jar /path/to/wiremock-standalone-2.18.0.jar --port c
+java -jar /path/to/wiremock-standalone-2.18.0.jar --port 9001
 ```
 
 ### Test
@@ -46,6 +46,10 @@ curl -X POST --data '{}' http://localhost:9001/payment/api/process
 ## Backend
 
 ### Run
+
+```
+node index.js
+```
 
 ### Test
 
