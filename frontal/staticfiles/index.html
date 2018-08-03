@@ -1,0 +1,32 @@
+
+<html>
+    <head>
+    <title>nginx</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    </head>
+    
+    <body>
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+        document.cookie = "JSESSIONID=502E1D86B34175D59FB9E3B51DA78588";
+        $.ajax("http://localhost:80/api/item/1", {
+            success: function(data) {
+                console.log(data)
+            },
+            error: function() {
+                console.log("error")
+            },
+            xhrFields: { withCredentials: true }
+            });
+    });
+    
+    </script>
+    
+    Static from nginx
+    
+    </body>
+</html>
