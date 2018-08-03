@@ -1,0 +1,16 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/item"
+    },
+    "response": {
+        "status": 200,
+		"jsonBody": {
+			"id": 2,
+			"label": "new item"
+		},
+		"headers": {
+		  "Content-Type": "application/json"
+		}
+    }
+}

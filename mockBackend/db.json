@@ -1,0 +1,12 @@
+{
+	"entities": [
+		{
+			"id": 1,
+			"label": "hello world"
+		},
+		{
+			"id": 2,
+			"label": "hello from json server"
+		}
+	]
+}
