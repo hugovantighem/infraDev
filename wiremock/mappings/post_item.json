@@ -1,12 +1,13 @@
 {
     "request": {
         "method": "POST",
-        "url": "/payment/api/process"
+        "url": "/api/item"
     },
     "response": {
         "status": 200,
 		"jsonBody": {
-			"ref": "new item"
+			"id": 2,
+			"label": "new item"
 		},
 		"headers": {
 		  "Content-Type": "application/json"

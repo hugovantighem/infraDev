@@ -5,6 +5,9 @@ services:
     volumes:
       - ./staticfiles:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./certificate.crt:/etc/nginx/certificate.crt
+      - ./certificate.key:/etc/nginx/certificate.key
     container_name: infra_dev_frontal
     ports:
       - 8080:80
+      - 8443:443

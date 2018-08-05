@@ -4,9 +4,8 @@
 
 wiremock
 
-### node
-### express
-c
+node
+express
 
 # Architecture schema
 
@@ -57,4 +56,23 @@ node index.js
 curl  http://localhost:3000
 curl  http://localhost:3000/payment
 ```
+
+## With https
+
+### Run
+
+Self signed certificate for https
+
+```
+openssl req -x509 -sha256 -newkey rsa:2048 -keyout certificate.key -out certificate.crt -days 1024 -nodes -subj '/CN=my.cn'
+openssl s_client -showcerts -servername server -connect 192.168.99.100:8443 > cacert.pem
+```
+
+### Test
+
+```
+curl --cacert cacert.pem https://192.168.99.100:8443/api/item/1
+```
+
+
 
