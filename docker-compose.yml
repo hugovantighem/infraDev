@@ -1,0 +1,29 @@
+version: '3'
+services:
+  mock_backend:
+    build: ./mockBackend
+    volumes:
+      - ./mockBackend/__files:/wiremock/__files
+      - ./mockBackend/mappings:/wiremock/mappings
+    container_name: mock_backend
+    ports:
+      - 9080:8080
+  mock_service:
+    build: ./mockService
+    volumes:
+      - ./mockService/__files:/wiremock/__files
+      - ./mockService/mappings:/wiremock/mappings
+    container_name: mock_service
+    ports:
+      - 9081:8080
+  nginx:
+    image: nginx
+    volumes:
+      - ./frontal/staticfiles:/usr/share/nginx/html
+      - ./frontal/nginx.conf:/etc/nginx/nginx.conf
+      - ./frontal/certificate.crt:/etc/nginx/certificate.crt
+      - ./frontal/certificate.key:/etc/nginx/certificate.key
+    container_name: infra_dev_frontal
+    ports:
+      - 8080:80
+      - 8443:443

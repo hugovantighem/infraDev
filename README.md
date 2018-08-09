@@ -74,5 +74,10 @@ openssl s_client -showcerts -servername server -connect 192.168.99.100:8443 > ca
 curl --cacert cacert.pem https://192.168.99.100:8443/api/item/1
 ```
 
+## Dockerized environment
 
+```
+docker-compose up
+curl --data {} http://192.168.99.100:8080/payment/api/process
+```
 
